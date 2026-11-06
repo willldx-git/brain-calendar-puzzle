@@ -20,7 +20,7 @@
 - 点击已放置的拼块进行选中，再使用旋转或翻转按钮调整方向。
 - 将拼块拖出棋盘后松开，可将它放回待选区。
 - 使用撤销、重开或更换日期开始新的挑战。
-- 点击“首块提示”会从完整解法中随机选一块，并按正确的位置和方向放置；使用后需重开本局，或将所有拼块移回待选区，才能再次使用。
+- 点击“首块提示”会从完整解法中随机选一块，并按正确的位置和方向放置；前两次点击各放置一块，之后点击会显示互动提示。模拟二维码不可支付，点击即可关闭提示继续游戏；也可以输入指定文字继续。
 - 拼出目标后会显示庆祝动画。
 
 ### 项目文件
@@ -51,7 +51,7 @@ Open `index.html` in a modern browser. No installation or build step is required
 - Select a placed piece, then use Rotate or Flip to change its orientation.
 - Drag a piece outside the board and release it to return it to the tray.
 - Use Undo, Restart, or Change date to start another challenge.
-- Use First-piece hint to place one randomly selected piece at its correct position and orientation in a complete solution. It becomes available again after restarting or returning every piece to the tray.
+- First-piece hint places one randomly selected piece at its correct position and orientation in a complete solution. The first two clicks each place a piece; later clicks show an interactive prompt. Its demo QR code cannot accept payments and closes the prompt when clicked, or you can enter the requested phrase to continue.
 - Completing the target reveals a celebration animation.
 
 ### Project files
