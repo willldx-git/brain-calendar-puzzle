@@ -17,7 +17,7 @@ Open `index.html` in a modern browser. No installation or build step is required
 - Drag a piece outside the board and release it to return it to the tray.
 - Use Undo, Restart, or Change date to start another challenge.
 - First-piece hint places one randomly selected piece at its correct position and orientation in a complete solution. The first two clicks each place a piece; later clicks show an interactive prompt. Its demo QR code cannot accept payments and closes the prompt when clicked, or you can enter the requested phrase to continue.
-- Completing the target reveals a celebration animation.
+- Completing the target reveals a celebration animation and elapsed time in HH:MM:SS, starting from the first hint click or first successful placement.
 
 ### Project files
 
@@ -48,7 +48,7 @@ By Will
 - 将拼块拖出棋盘后松开，可放回待选区。
 - 使用“撤销”“重开”或“换日期”开始新挑战。
 - 点击“首块提示”会从完整解法中随机选一块，并按正确的位置和方向放置；前两次点击各放置一块，之后点击会显示互动提示。模拟二维码不可支付，点击即可关闭提示继续游戏；也可以输入指定文字继续。
-- 完成目标后会显示庆祝动画。
+- 拼出目标后会显示庆祝动画和用时；计时从首次点击提示或首次成功落子开始，格式为时:分:秒。
 
 ### 许可
 
