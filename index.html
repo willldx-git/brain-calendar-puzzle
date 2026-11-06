@@ -43,17 +43,18 @@
     }
     .hint-overlay{position:fixed;inset:0;z-index:40;display:none;place-items:center;padding:18px;background:radial-gradient(circle at 50% 40%,#ffbf6333,transparent 34%),#201810bd;backdrop-filter:blur(8px)}
     .hint-overlay.show{display:grid;animation:hintVeil .25s ease-out both}
-    .hint-dialog{position:relative;isolation:isolate;width:min(440px,100%);padding:32px 28px 26px;border:1px solid #fff3;border-radius:28px;background:linear-gradient(145deg,#fffefa,#fff0dd);box-shadow:0 28px 100px #0008,0 0 0 7px #ffb64d29;text-align:center;overflow:hidden;animation:hintImpact .72s cubic-bezier(.18,1.55,.35,1) both}
+    .hint-dialog{position:relative;isolation:isolate;width:min(440px,100%);max-height:calc(100dvh - 36px);overflow:auto;padding:32px 28px 26px;border:1px solid #fff3;border-radius:28px;background:linear-gradient(145deg,#fffefa,#fff0dd);box-shadow:0 28px 100px #0008,0 0 0 7px #ffb64d29;text-align:center;animation:hintImpact .72s cubic-bezier(.18,1.55,.35,1) both}
+    .hint-dialog[data-view="payment"]{width:min(860px,100%);padding:clamp(24px,4vw,48px);border-radius:38px}
     .hint-dialog:before{content:"";position:absolute;z-index:-1;inset:-50%;background:conic-gradient(from 0deg,transparent 0 18%,#ff8a4825 22%,transparent 29% 48%,#e52f6020 53%,transparent 60% 78%,#ffc83d24 84%,transparent 90%);animation:hintHalo 8s linear infinite}
     .hint-burst{display:grid;place-items:center;width:80px;height:80px;margin:0 auto 12px;border:4px solid #fff;border-radius:25px;background:linear-gradient(145deg,#ff8a3d,#eb3f48);font-size:43px;box-shadow:0 9px 24px #df4b3c55,0 0 0 7px #ff9b4d20;animation:hintBurst .9s .12s both}
     .hint-dialog h2{margin:4px 0 9px;color:#31251f;font-size:clamp(24px,6vw,32px);letter-spacing:-.04em}.hint-dialog p{margin:0 auto 20px;color:#6d594d;line-height:1.65;font-weight:700}
     .hint-actions{display:grid;gap:10px}.hint-actions button,.hint-confirm,.hint-back{min-height:48px;padding:11px 16px;border:1px solid #e8d9c7;border-radius:14px;background:#fffdf8;color:#4d4037;font-weight:850;box-shadow:0 3px 0 #e9ddce;transition:transform .15s,box-shadow .15s,filter .15s}
     .hint-actions button:hover,.hint-confirm:hover,.hint-back:hover{transform:translateY(-2px);box-shadow:0 5px 0 #e9ddce;filter:saturate(1.1)}.hint-actions .hint-recharge,.hint-confirm{border-color:#e9542d;background:linear-gradient(135deg,#ff8038,#ed4938);color:#fff;box-shadow:0 4px 0 #bf382b,0 9px 18px #e75d3630}.hint-recharge:hover,.hint-confirm:hover{box-shadow:0 6px 0 #bf382b,0 12px 22px #e75d3644}
-    .hint-view[hidden]{display:none!important}.hint-demo-tag{display:inline-flex;align-items:center;gap:6px;margin:0 auto 14px;padding:5px 10px;border-radius:99px;background:#e8f5ee;color:#28764c;font-size:11px;font-weight:850;letter-spacing:.04em}
-    .fake-qr-button{display:grid;justify-items:center;gap:10px;margin:2px auto 0;padding:12px 16px 14px;border:2px solid #fff;border-radius:18px;background:#fff;box-shadow:0 9px 24px #60422a20;cursor:pointer}.fake-qr-button svg{display:block;width:min(210px,58vw);height:auto;padding:10px;border:1px solid #eee8df;border-radius:10px;background:#fff}.fake-qr-button span{color:#4b423a;font-size:13px;font-weight:850}.demo-footnote{margin:13px 0 0!important;color:#8c8177!important;font-size:11px;font-weight:600!important}
+    .hint-view[hidden]{display:none!important}
+    .fake-qr-button{display:grid;justify-items:center;margin:5px auto 12px;padding:clamp(12px,2vw,20px);border:2px solid #fff;border-radius:28px;background:#fff;box-shadow:0 9px 24px #60422a20;cursor:pointer}.fake-qr-button svg{display:block;width:min(400px,62vw);height:auto;padding:clamp(10px,1.5vw,18px);border:1px solid #eee8df;border-radius:18px;background:#fff}.qr-caption{margin:0!important;color:#51463e!important;font-size:clamp(15px,2.2vw,24px);font-weight:800!important}.qr-continue-link{padding:2px 0;border:0;background:transparent;color:#0874d5;font:inherit;font-weight:900;text-decoration:underline;text-underline-offset:4px;cursor:pointer}.qr-continue-link:hover{color:#0059b8}
     .hint-form{display:flex;gap:8px;margin:0 auto 10px;max-width:340px}.hint-form input{min-width:0;flex:1;height:48px;padding:0 13px;border:1px solid #dfd0bf;border-radius:13px;background:#fff;color:#302923;font:inherit;font-weight:750;outline:none}.hint-form input:focus{border-color:#ef7145;box-shadow:0 0 0 4px #ef714522}.hint-confirm{min-width:82px}.hint-error{min-height:21px;margin:3px 0 8px!important;color:#c23c36!important;font-size:12px;font-weight:750!important}.hint-back{min-height:38px;padding:7px 13px;font-size:12px}
     @keyframes hintVeil{from{opacity:0}to{opacity:1}}@keyframes hintImpact{0%{opacity:0;transform:translateY(50px) scale(.52) rotate(-9deg)}48%{opacity:1;transform:translateY(-12px) scale(1.08) rotate(3deg)}68%{transform:translateY(5px) scale(.97) rotate(-1.5deg)}82%{transform:translateY(-3px) scale(1.015) rotate(.5deg)}100%{transform:translateY(0) scale(1) rotate(0)}}@keyframes hintBurst{0%{transform:scale(.1) rotate(-35deg)}55%{transform:scale(1.28) rotate(12deg)}75%{transform:scale(.9) rotate(-5deg)}100%{transform:scale(1) rotate(0)}}@keyframes hintHalo{to{transform:rotate(360deg)}}
-    @media(max-width:480px){.hint-dialog{padding:26px 19px 22px;border-radius:23px}.hint-burst{width:68px;height:68px;border-radius:21px;font-size:36px}.hint-form{gap:6px}.hint-form input{padding:0 10px;font-size:14px}}
+    @media(max-width:480px){.hint-dialog{padding:26px 19px 22px;border-radius:23px}.hint-dialog[data-view="payment"]{padding:22px 15px;border-radius:25px}.hint-burst{width:68px;height:68px;border-radius:21px;font-size:36px}.hint-form{gap:6px}.hint-form input{padding:0 10px;font-size:14px}.fake-qr-button{padding:9px;border-radius:19px}.fake-qr-button svg{width:min(320px,72vw)}}
     @media(prefers-reduced-motion:reduce){.hint-overlay.show,.hint-dialog,.hint-burst,.hint-dialog:before{animation-duration:.01ms!important;animation-iteration-count:1!important}}
   </style>
 </head>
@@ -76,21 +77,19 @@
   <div class="win" id="win"><div class="confetti" id="confetti" aria-hidden="true"></div><div class="win-card"><div class="win-emoji">🎉</div><h2>拼出来了！</h2><p id="winMessage">今天的日期已经完整露出。</p><button id="winClose">继续挑战</button></div></div>
   <div class="hint-overlay" id="hintModal" aria-hidden="true">
     <section class="hint-dialog" role="dialog" aria-modal="true" aria-labelledby="hintDialogTitle">
-      <div class="hint-burst" aria-hidden="true">🧠💥</div>
+      <div class="hint-burst" aria-hidden="true">🧠</div>
       <div class="hint-view" data-hint-view="choice">
         <h2 id="hintDialogTitle">还要提示吗？</h2>
         <p>要不你还是充值当 rmb 玩家吧！</p>
         <div class="hint-actions"><button class="hint-recharge" id="hintRecharge">好，去充值</button><button id="hintConfess">输入「我智商低」以继续</button></div>
       </div>
       <div class="hint-view" data-hint-view="payment" hidden>
-        <span class="hint-demo-tag">支付宝 · 模拟演示码</span>
-        <h2>赞助一下你的脑力</h2>
-        <p>这是假的支付码，不会发起真实付款。</p>
-        <button class="fake-qr-button" id="fakeQrContinue" aria-label="点击模拟二维码继续游戏"><svg id="fakeQr" viewBox="0 0 25 25" role="img" aria-label="虚构的不可支付二维码"></svg><span>点一下二维码，继续游戏</span></button>
-        <p class="demo-footnote">演示用二维码 · 不可扫描支付</p>
+        <h2 id="paymentDialogTitle">赞助一下你的脑力</h2>
+        <button class="fake-qr-button" id="fakeQrContinue" aria-label="点击二维码继续游戏"><svg id="fakeQr" viewBox="0 0 25 25" role="img" aria-label="二维码"></svg></button>
+        <p class="qr-caption">扫码支付，<button class="qr-continue-link" id="qrContinueText" type="button">继续游戏</button></p>
       </div>
       <div class="hint-view" data-hint-view="confession" hidden>
-        <h2>诚实回答一下</h2>
+        <h2 id="confessionDialogTitle">诚实回答一下</h2>
         <p>输入“我智商低”，点击确定后继续挑战。</p>
         <form class="hint-form" id="confessionForm"><input id="confessionInput" type="text" autocomplete="off" placeholder="我智商低" aria-label="输入我智商低"><button class="hint-confirm" type="submit">确定</button></form>
         <p class="hint-error" id="confessionError" aria-live="polite"></p>
@@ -145,7 +144,7 @@
       function celebrate(){const layer=document.querySelector('#confetti'),colors=['#2FA95D','#8C47C7','#0874D5','#F4B91E','#E22C89','#35414D','#F37B1D','#0AA88C','#F0443D','#8C5B35'];layer.replaceChildren();for(let i=0;i<72;i++){const bit=document.createElement('i');bit.className='confetti-piece';bit.style.left=`${Math.random()*100}%`;bit.style.setProperty('--size',`${7+Math.random()*7}px`);bit.style.setProperty('--fall',`${2.8+Math.random()*2.1}s`);bit.style.setProperty('--delay',`${Math.random()*.9}s`);bit.style.setProperty('--drift',`${Math.round(Math.random()*240-120)}px`);bit.style.setProperty('--spin',`${Math.round(Math.random()*1000-500)}deg`);bit.style.background=colors[i%colors.length];bit.style.borderRadius=i%4===0?'50%':'2px';layer.append(bit)}clearTimeout(layer._clearTimer);layer._clearTimer=setTimeout(()=>layer.replaceChildren(),5700)}
       function allFilled(){return pieces.every(p=>placements.has(p.id))}
       function syncHintButton(){const button=document.querySelector('#hintBtn');if(!button)return;if(placements.size===0)hintCount=0;const label=hintCount===0?'首块提示':'继续提示',caption=button.querySelector('.button-label');if(caption)caption.textContent=label;button.setAttribute('aria-label',label);button.disabled=placements.size===pieces.length;button.title=hintCount>=2?'再点一次会弹出提示对话框':'从完整解法中随机放置一块拼图'}
-      function setHintView(name){document.querySelectorAll('[data-hint-view]').forEach(view=>{view.hidden=view.dataset.hintView!==name})}
+      function setHintView(name){document.querySelectorAll('[data-hint-view]').forEach(view=>{view.hidden=view.dataset.hintView!==name});const dialog=document.querySelector('.hint-dialog'),heading={choice:'hintDialogTitle',payment:'paymentDialogTitle',confession:'confessionDialogTitle'}[name];dialog.dataset.view=name;dialog.setAttribute('aria-labelledby',heading)}
       function openHintModal(name='choice'){const modal=document.querySelector('#hintModal');setHintView(name);modal.classList.add('show');modal.setAttribute('aria-hidden','false');if(name==='confession')setTimeout(()=>document.querySelector('#confessionInput').focus(),80)}
       function closeHintModal(){const modal=document.querySelector('#hintModal');modal.classList.remove('show');modal.setAttribute('aria-hidden','true');setHintView('choice');document.querySelector('#confessionInput').value='';document.querySelector('#confessionError').textContent=''}
       function buildFakeQr(){const svg=document.querySelector('#fakeQr'),ns='http://www.w3.org/2000/svg',size=25;svg.replaceChildren();const bg=document.createElementNS(ns,'rect');bg.setAttribute('width',size);bg.setAttribute('height',size);bg.setAttribute('fill','#fff');svg.append(bg);const inFinder=(x,y,ox,oy)=>x>=ox&&x<ox+7&&y>=oy&&y<oy+7;const finderOn=(x,y,ox,oy)=>{const dx=x-ox,dy=y-oy;return dx===0||dy===0||dx===6||dy===6||(dx>=2&&dx<=4&&dy>=2&&dy<=4)};for(let y=0;y<size;y++)for(let x=0;x<size;x++){let on=false;if(inFinder(x,y,0,0))on=finderOn(x,y,0,0);else if(inFinder(x,y,18,0))on=finderOn(x,y,18,0);else if(inFinder(x,y,0,18))on=finderOn(x,y,0,18);else on=((x*17+y*31+x*y*7+((x+y)%3)*11)%13)<6;if(on){const cell=document.createElementNS(ns,'rect');cell.setAttribute('x',x);cell.setAttribute('y',y);cell.setAttribute('width','1');cell.setAttribute('height','1');cell.setAttribute('fill','#202a25');svg.append(cell)}}}
@@ -170,6 +169,7 @@
       document.querySelector('#hintBtn').addEventListener('click',firstPieceHint);
       document.querySelector('#hintRecharge').addEventListener('click',()=>{buildFakeQr();setHintView('payment')});
       document.querySelector('#fakeQrContinue').addEventListener('click',()=>{closeHintModal();toastMsg('演示充值完成，继续挑战吧')});
+      document.querySelector('#qrContinueText').addEventListener('click',()=>{closeHintModal();toastMsg('继续挑战吧')});
       document.querySelector('#hintConfess').addEventListener('click',()=>openHintModal('confession'));
       document.querySelector('#hintBack').addEventListener('click',()=>openHintModal('choice'));
       document.querySelector('#confessionForm').addEventListener('submit',event=>{event.preventDefault();if(document.querySelector('#confessionInput').value.trim()==='我智商低'){closeHintModal();toastMsg('回答正确，继续挑战吧')}else document.querySelector('#confessionError').textContent='请准确输入“我智商低”后再点确定'});
