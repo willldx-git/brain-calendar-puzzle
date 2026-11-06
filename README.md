@@ -6,7 +6,9 @@
 
 一个无需构建工具、直接在浏览器中运行的 H5 日历拼图小游戏。玩家通过拖动、旋转和翻转连通拼块，露出目标月份、日期和星期。
 
-![游戏演示：拖动拼块，露出目标日期](assets/brain-calendar-demo.gif)
+<video src="https://raw.githubusercontent.com/willldx-git/brain-calendar-puzzle/main/assets/brain-calendar-demo.mov" controls muted playsinline width="100%"></video>
+
+[播放游戏演示视频（MOV，约 6 秒）](assets/brain-calendar-demo.mov)
 
 ### 在线体验
 
@@ -28,7 +30,7 @@
 ### 项目文件
 
 - `index.html`：游戏页面、样式和交互逻辑。
-- `assets/brain-calendar-demo.gif`：游戏拖放与目标日期展示动画。
+- `assets/brain-calendar-demo.mov`：约 6 秒的游戏演示视频，画面根据当前游戏界面和拼块定义制作。
 - `design-options/`：早期界面风格方案。
 - `设计稿-木质玩具风格.svg`、`2026-10-21-拼图摆放图.svg`：设计参考图。
 

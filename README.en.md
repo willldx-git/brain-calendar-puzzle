@@ -6,7 +6,9 @@
 
 A browser-based H5 calendar puzzle game with no build tools or dependencies. Drag, rotate, and flip connected polyomino pieces to uncover the target month, day, and weekday.
 
-![Gameplay preview: drag a piece to uncover the target date](assets/brain-calendar-demo.gif)
+<video src="https://raw.githubusercontent.com/willldx-git/brain-calendar-puzzle/main/assets/brain-calendar-demo.mov" controls muted playsinline width="100%"></video>
+
+[Watch the short gameplay video (MOV, about 6 seconds)](assets/brain-calendar-demo.mov)
 
 ### Run locally
 
@@ -24,7 +26,7 @@ Open `index.html` in a modern browser. No installation or build step is required
 ### Project files
 
 - `index.html`: the game UI, styles, and interaction logic.
-- `assets/brain-calendar-demo.gif`: an animated preview of piece placement and the target date.
+- `assets/brain-calendar-demo.mov`: a short gameplay video using the current game interface and piece definitions.
 - `design-options/`: early visual style explorations.
 - `设计稿-木质玩具风格.svg` and `2026-10-21-拼图摆放图.svg`: design reference images.
 
