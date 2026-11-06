@@ -57,10 +57,13 @@
     @media(max-width:480px){.hint-dialog{border-radius:23px}.hint-dialog[data-view="payment"]{padding:clamp(12px,2.5vh,20px) 15px;border-radius:25px}.hint-burst{border-radius:21px}.hint-form{gap:6px}.hint-form input{padding:0 10px;font-size:14px}.fake-qr-button{border-radius:18px}}
     @media(prefers-reduced-motion:reduce){.hint-overlay.show,.hint-dialog,.hint-burst,.hint-dialog:before{animation-duration:.01ms!important;animation-iteration-count:1!important}}
   
-    .tray-completion-actions{grid-column:1/-1;display:flex;justify-content:center;gap:10px;margin:4px 8px 10px;padding:0 10px}
-    .tray-completion-actions button{flex:1;max-width:160px;min-height:42px;padding:9px 12px;border:1px solid #e7d8c8;border-radius:13px;background:#fffdf8;color:#5a4b40;font:inherit;font-size:13px;font-weight:850;box-shadow:0 4px 10px #60422a12;cursor:pointer;transition:transform .15s,box-shadow .15s}
-    .tray-completion-actions button:first-child{border-color:#e9542d;background:linear-gradient(135deg,#ff8038,#ed4938);color:#fff;box-shadow:0 4px 0 #bf382b,0 8px 16px #e75d3630}
-    .tray-completion-actions button:hover{transform:translateY(-2px);box-shadow:0 7px 14px #60422a20}
+    .tray-completion-actions{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:4px 0 10px;padding:0}
+    .tray-completion-actions button{min-width:0;min-height:52px;padding:7px 8px;border:1px solid var(--line);border-radius:11px;background:#fffaf2;color:#57574f;font:inherit;font-size:12px;font-weight:750;box-shadow:none;cursor:pointer;transition:background .15s,border-color .15s,transform .15s}
+    .tray-completion-actions button:first-child{border-color:#e9542d;background:linear-gradient(135deg,#ff8038,#ed4938);color:#fff;box-shadow:0 3px 0 #bf382b,0 6px 12px #e75d3622}
+    .tray-completion-actions button:hover{transform:translateY(-1px);border-color:#e3cbb8;background:white}
+    .tray-completion-actions button:first-child:hover{background:linear-gradient(135deg,#ff8038,#ed4938);box-shadow:0 4px 0 #bf382b,0 8px 15px #e75d3630}
+    .win-card #winClose{min-width:min(230px,72%);min-height:58px;padding:14px 26px;border:0;border-radius:20px;background:linear-gradient(110deg,#ff762e 0%,#f54b31 100%);color:#fff;font-size:20px;font-weight:900;letter-spacing:.01em;box-shadow:0 8px 20px #e9513635;transition:transform .16s,box-shadow .16s}
+    .win-card #winClose:hover{transform:translateY(-2px);box-shadow:0 11px 24px #e9513648}
   </style>
 </head>
 <body>
