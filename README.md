@@ -6,9 +6,7 @@
 
 一个无需构建工具、直接在浏览器中运行的 H5 日历拼图小游戏。玩家通过拖动、旋转和翻转连通拼块，露出目标月份、日期和星期。
 
-<video src="https://raw.githubusercontent.com/willldx-git/brain-calendar-puzzle/main/assets/brain-calendar-demo.mov" controls muted playsinline width="100%"></video>
-
-[播放游戏演示视频（MOV，约 6 秒）](assets/brain-calendar-demo.mov)
+https://github.com/user-attachments/assets/5001b00a-130f-4c0a-acfb-1cf2818588b2
 
 ### 在线体验
 
@@ -16,7 +14,7 @@
 
 ### 本地运行
 
-直接用浏览器打开 `index.html` 即可，无需安装依赖或启动构建工具。
+直接用浏览器打开 index.html 即可，无需安装依赖或启动构建工具。
 
 ### 操作方式
 
@@ -29,10 +27,10 @@
 
 ### 项目文件
 
-- `index.html`：游戏页面、样式和交互逻辑。
-- `assets/brain-calendar-demo.mov`：约 6 秒的游戏演示视频，画面根据当前游戏界面和拼块定义制作。
-- `design-options/`：早期界面风格方案。
-- `设计稿-木质玩具风格.svg`、`2026-10-21-拼图摆放图.svg`：设计参考图。
+- index.html：游戏页面、样式和交互逻辑。
+- assets/brain-calendar-demo.mov：原始游戏演示视频；README 使用可在浏览器中播放的 H.264 附件版本。
+- design-options/：早期界面风格方案。
+- 设计稿-木质玩具风格.svg、2026-10-21-拼图摆放图.svg：设计参考图。
 
 ### 许可
 
@@ -48,7 +46,7 @@ A browser-based H5 calendar puzzle game with no build tools or dependencies. Dra
 
 ### Run locally
 
-Open `index.html` in a modern browser. No installation or build step is required.
+Open index.html in a modern browser. No installation or build step is required.
 
 ### How to play
 
@@ -61,14 +59,40 @@ Open `index.html` in a modern browser. No installation or build step is required
 
 ### Project files
 
-- `index.html`: the game UI, styles, and interaction logic.
-- `design-options/`: early visual style explorations.
-- `设计稿-木质玩具风格.svg` and `2026-10-21-拼图摆放图.svg`: design reference images.
+- index.html: the game UI, styles, and interaction logic.
+- assets/brain-calendar-demo.mov: the original gameplay video. The embedded README player uses an H.264 attachment for browser compatibility.
+- design-options/: early visual style explorations.
+- 设计稿-木质玩具风格.svg and 2026-10-21-拼图摆放图.svg: design reference images.
 
 ### License
 
 Released under the MIT License. See [LICENSE](LICENSE).
 
 ### Author
+
+By Will
+
+## 简体中文
+
+这是一个无需构建工具、直接在浏览器中运行的 H5 日历拼图小游戏。拖动、旋转和翻转连通拼块，露出目标月份、日期和星期。
+
+### 本地运行
+
+直接用现代浏览器打开 index.html 即可，无需安装依赖或构建。
+
+### 操作方式
+
+- 将拼块拖到棋盘，靠近格子时会自动吸附。
+- 选中棋盘上的拼块后，使用“旋转”或“翻转”调整方向。
+- 将拼块拖出棋盘后松开，可放回待选区。
+- 使用“撤销”“重开”或“换日期”开始新挑战。
+- 点击“首块提示”会从完整解法中随机选一块，并按正确的位置和方向放置；前两次点击各放置一块，之后点击会显示互动提示。模拟二维码不可支付，点击即可关闭提示继续游戏；也可以输入指定文字继续。
+- 拼出目标后会显示庆祝动画和用时；计时从首次点击提示或首次成功落子开始，格式为时:分:秒。
+
+### 许可
+
+本项目以 MIT License 发布，详见 [LICENSE](LICENSE)。
+
+### 作者
 
 By Will
