@@ -20,7 +20,7 @@ Open `index.html` in a modern browser. No installation or build step is required
 - Select a placed piece, then use Rotate or Flip to change its orientation.
 - Drag a piece outside the board and release it to return it to the tray.
 - Use Undo, Restart, or Change date to start another challenge.
-- On a fresh, empty board, “First-piece hint” places one randomly selected piece correctly; one more actual placement is available through “Continue hint”. If you place a piece manually first, only one actual hint placement is available. When more than two pieces are already on the board, or the hint allowance is used up, clicking “Continue hint” opens the recharge-code or text-entry dialog without adding another hint. Each round allows at most two hinted pieces; undoing or moving pieces does not restore uses. Restarting or changing the date resets the count.
+- On a fresh, empty board, “First-piece hint” places one randomly selected piece correctly; one more actual placement is available through “Continue hint”. If you place a piece manually first, only one actual hint placement is available. When two or more pieces are already on the board, or the hint allowance is used up, clicking “Continue hint” opens the recharge-code or text-entry dialog without adding another hint. Each round allows at most two hinted pieces; undoing or moving pieces does not restore uses. Restarting or changing the date resets the count.
 - Completing the target reveals a celebration animation, elapsed time, and hint count. The timer starts with the first hint click or first successful placement and is shown as HH:MM:SS.
 
 ### Project files
@@ -52,7 +52,7 @@ By Will
 - 选中棋盘上的拼块后，使用“旋转”或“翻转”调整方向。
 - 将拼块拖出棋盘后松开，可放回待选区。
 - 使用“撤销”“重开”或“换日期”开始新挑战。
-- 新局棋盘为空时可使用“首块提示”，之后“继续提示”还可放置一块；如果先手动放置拼块，则只提供一次实际提示。棋盘上已放置超过两块拼块，或提示额度用完后，点击“继续提示”会打开充值码或输入文字弹窗，不会增加提示次数。每局最多放置两块提示拼块，撤销或移动拼块不会恢复次数，重开本局或更换日期后重置。
+- 新局棋盘为空时可使用“首块提示”，之后“继续提示”还可放置一块；如果先手动放置拼块，则只提供一次实际提示。棋盘上已放置两块或更多拼块，或提示额度用完后，点击“继续提示”会打开充值码或输入文字弹窗，不会增加提示次数。每局最多放置两块提示拼块，撤销或移动拼块不会恢复次数，重开本局或更换日期后重置。
 - 拼出目标后会显示庆祝动画、用时和提示次数；计时从首次点击提示或首次成功落子开始，格式为时:分:秒。
 
 ### 许可
