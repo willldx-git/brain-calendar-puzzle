@@ -20,8 +20,8 @@ Open `index.html` in a modern browser. No installation or build step is required
 - Select a placed piece, then use Rotate or Flip to change its orientation.
 - Drag a piece outside the board and release it to return it to the tray.
 - Use Undo, Restart, or Change date to start another challenge.
-- First-piece hint places one randomly selected piece at its correct position and orientation in a complete solution. The first two clicks each place a piece; later clicks show an interactive prompt. Its demo QR code cannot accept payments and closes the prompt when clicked, or you can enter the requested phrase to continue.
-- Completing the target reveals a celebration animation and elapsed time in HH:MM:SS, starting from the first hint click or first successful placement.
+- On a fresh, empty board, “First-piece hint” places one randomly selected piece correctly; one more actual placement is available through “Continue hint”. If you place a piece manually first, only one actual hint placement is available. After the hint placements are used, clicking “Continue hint” opens the recharge-code or text-entry dialog without adding another hint. Each round allows at most two hinted pieces; undoing or moving pieces does not restore uses. Restarting or changing the date resets the count.
+- Completing the target reveals a celebration animation, elapsed time, and hint count. The timer starts with the first hint click or first successful placement and is shown as HH:MM:SS.
 
 ### Project files
 
@@ -52,8 +52,8 @@ By Will
 - 选中棋盘上的拼块后，使用“旋转”或“翻转”调整方向。
 - 将拼块拖出棋盘后松开，可放回待选区。
 - 使用“撤销”“重开”或“换日期”开始新挑战。
-- 点击“首块提示”会从完整解法中随机选一块，并按正确的位置和方向放置；前两次点击各放置一块，之后点击会显示互动提示。模拟二维码不可支付，点击即可关闭提示继续游戏；也可以输入指定文字继续。
-- 拼出目标后会显示庆祝动画和用时；计时从首次点击提示或首次成功落子开始，格式为时:分:秒。
+- 新局棋盘为空时可使用“首块提示”，之后“继续提示”还可放置一块；如果先手动放置拼块，则只提供一次实际提示。提示用完后再次点击“继续提示”会打开充值码或输入文字弹窗，不会增加提示次数。每局最多放置两块提示拼块，撤销或移动拼块不会恢复次数，重开本局或更换日期后重置。
+- 拼出目标后会显示庆祝动画、用时和提示次数；计时从首次点击提示或首次成功落子开始，格式为时:分:秒。
 
 ### 许可
 
