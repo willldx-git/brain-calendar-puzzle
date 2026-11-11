@@ -20,7 +20,7 @@ Open `index.html` in a modern browser. No installation or build step is required
 - Select a placed piece, then use Rotate or Flip to change its orientation.
 - Drag a piece outside the board and release it to return it to the tray.
 - Use Undo, Restart, or Change date to start another challenge.
-- On a fresh, empty board, “First-piece hint” places one randomly selected piece correctly; one more actual placement is available through “Continue hint”. If you place a piece manually first, only one actual hint placement is available. When two or more pieces are already on the board, or the hint allowance is used up, clicking “Continue hint” opens the recharge-code or text-entry dialog without adding another hint. Each round allows at most two hinted pieces; undoing or moving pieces does not restore uses. Restarting or changing the date resets the count.
+- On a fresh, empty board, “First-piece hint” places one randomly selected piece correctly; one more actual placement is available through “Continue hint”. If you place a piece manually first, only one actual hint placement is available. When two or more pieces are already on the board, clicking “Continue hint” shows “Hints are available only with fewer than 2 pieces placed”. After the hint allowance is used up, clicking again opens the recharge-code or text-entry dialog. Each round allows at most two hinted pieces; undoing or moving pieces does not restore uses. Restarting or changing the date resets the count.
 - Completing the target reveals a celebration animation, elapsed time, and hint count. The timer starts with the first hint click or first successful placement and is shown as HH:MM:SS.
 
 ### Project files
