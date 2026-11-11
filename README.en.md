@@ -17,6 +17,7 @@ Open `index.html` in a modern browser. No installation or build step is required
 ### How to play
 
 - Drag a piece onto the board; it snaps to nearby cells.
+- Click a piece to pick it up and attach it to the cursor. Use the wheel to rotate, right-click to flip, and left-click the board to place it. Drag and drop still works too.
 - Select a placed piece, then use Rotate or Flip to change its orientation.
 - Drag a piece outside the board and release it to return it to the tray.
 - Use Undo, Restart, or Change date to start another challenge.
