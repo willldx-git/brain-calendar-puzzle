@@ -87,6 +87,27 @@
     .tray-solution-progress{grid-column:1/-1;margin:0;padding:0 8px;text-align:center;color:var(--muted);font-size:13px;line-height:1.5;overflow-wrap:anywhere}
     .win-solution-progress strong,.tray-solution-progress strong{color:var(--ink);font-variant-numeric:tabular-nums}
     .all-solutions .win-solution-progress strong{color:var(--win-gold)}
+    .win .win-card.standard-win{--party-edge:#da845b;--party-glow:#f4755f56;--party-star:#b04b32;--result-label:#754b42;background:radial-gradient(ellipse at 50% 0,#ffd7b0,transparent 55%),linear-gradient(145deg,#fff8ed 36%,#ffeaf0 100%);border-color:var(--party-edge);box-shadow:0 0 0 4px #ffad8045,0 0 36px var(--party-glow),0 25px 80px #0005;isolation:isolate}
+    .win-card.standard-win:before{background:conic-gradient(from 40deg,#ed754933,#ff9741aa,#e46d9c88,#fcb16a88,#ed754933);opacity:.42}
+    .win-card.standard-win #winTitle{color:#823d2b}
+    .win-card.standard-win #winMessage{color:var(--result-label)}
+    .win-card.standard-win .win-emoji{position:relative;background:linear-gradient(145deg,#fff2c2,#ffc06a);box-shadow:inset 0 0 0 1px #fff6cf,0 0 27px #ffac698c}
+    .win-card.standard-win .win-emoji:before{content:"";position:absolute;inset:-7px;border:1px solid var(--party-edge);border-radius:32px;transform:rotate(-11deg)}
+    .win-card.standard-win #winEmoji{position:relative;text-shadow:0 4px 8px #9a482744}
+    .win-party-effects{position:absolute;inset:0;pointer-events:none;color:var(--party-star)}
+    .win-party-effects[hidden]{display:none}
+    .win-party-glint{position:absolute;font-size:16px;line-height:1}
+    .win-party-glint:nth-child(1){top:52px;left:20%;color:var(--party-edge)}
+    .win-party-glint:nth-child(2){top:106px;left:13%;font-size:11px}
+    .win-party-glint:nth-child(3){top:43px;right:14%;font-size:12px}
+    .win-party-glint:nth-child(4){top:100px;right:21%;color:var(--party-edge)}
+    .win-party-particle{position:absolute;top:76px;left:50%;width:5px;height:12px;border-radius:2px;background:var(--particle-color);opacity:0;animation:winPartyBurst .9s .22s cubic-bezier(.16,.7,.3,1) both}
+    .win-party-particle:nth-child(2n){width:6px;height:6px;border-radius:50%}
+    .win-party-sweep{position:absolute;inset:0;border-radius:inherit;overflow:hidden;pointer-events:none}
+    .win-party-sweep:before{content:"";position:absolute;top:-10%;left:-72%;width:53%;height:120%;background:linear-gradient(90deg,transparent,#fff3ce35,transparent);transform:skewX(-19deg);opacity:0;animation:winPartySweep 1.05s .28s ease-out both}
+    @keyframes winPartyBurst{0%{opacity:0;transform:rotate(var(--angle)) translateX(32px)}22%{opacity:1}68%{opacity:.9}100%{opacity:0;transform:rotate(var(--angle)) translateX(clamp(70px,24vw,142px)) rotate(110deg)}}
+    @keyframes winPartySweep{0%{opacity:0;transform:translateX(0) skewX(-19deg)}30%{opacity:1}80%{opacity:.9}100%{opacity:0;transform:translateX(335%) skewX(-19deg)}}
+    @media(prefers-reduced-motion:reduce){.win-party-particle,.win-party-sweep:before{animation:none}}
     .win .win-card.new-solution{--win-sparkle:#7150c2;--result-label:#524571;background:radial-gradient(ellipse at 50% 0,#ece1ff,transparent 60%),linear-gradient(155deg,#faf6ff,#eef4ff);border-color:#a98ce8;box-shadow:0 0 0 4px #cbb5ff55,0 0 34px #8f65ea62,0 25px 80px #0004}
     .win-card.new-solution:before{background:conic-gradient(from 10deg,#9254ee77,#a5d9ff,#b48dff55,#c0a2ff,#9254ee77);opacity:.55}
     .win-card.new-solution #winTitle{color:#54359e}
@@ -100,6 +121,27 @@
     .win-award-medal:before{content:"";position:absolute;inset:5px;border:1px solid #e9dbffb0;border-radius:50%;background:radial-gradient(circle at 34% 22%,#a577f1,#5838a5 61%,#352674);box-shadow:inset 0 0 10px #28145578}
     .win-award-gem{z-index:1;width:34px;height:38px;background:conic-gradient(from 15deg at 49% 42%,#efe6ff,#a78af9,#6155ed,#9f70f5,#f7dcff,#fff,#efe6ff);clip-path:polygon(50% 0,100% 28%,87% 73%,50% 100%,13% 73%,0 28%);animation:winGemShine 2.1s ease-in-out infinite alternate}
     @keyframes winGemShine{from{filter:brightness(1)}to{filter:brightness(1.35)}}
+    .win .win-card.no-returns{--win-sparkle:#00798b;--result-label:#285766;--no-returns-title:#006478;background:radial-gradient(ellipse at 50% 0,#c2fff5,transparent 62%),linear-gradient(155deg,#f4fffc,#e3f5ff);border-color:#52b8bd;box-shadow:0 0 0 4px #5eddd44d,0 0 32px #1aaeb05e,0 25px 80px #0004;transition:border-color .25s,box-shadow .25s}
+    .win .win-card.no-returns.smirk-revealed{--win-sparkle:#ac3c74;--result-label:#70405e;--no-returns-title:#8a2d61;background:radial-gradient(ellipse at 50% 0,#f8c9e0,transparent 62%),linear-gradient(155deg,#fff3f8,#f8eaf9);border-color:#dc88b8;box-shadow:0 0 0 4px #ef9ecf4d,0 0 32px #cc4a905e,0 25px 80px #0004}
+    .win-card.no-returns:before{background:conic-gradient(from 35deg,#36c9c577,#75d8fa,#36c9c533,#95f8d7,#36c9c577);opacity:.5}
+    .win-card.no-returns.smirk-revealed:before{background:conic-gradient(from 35deg,#e15b9d77,#ed8db9,#b952af33,#ffc297,#e15b9d77)}
+    .win-card.no-returns #winTitle{color:var(--no-returns-title)}
+    .win-card.no-returns #winMessage{color:var(--result-label);text-wrap:balance}
+    .win-card.no-returns .win-emoji{width:100px;height:92px;background:none;box-shadow:none}
+    .win-bolt-award{position:relative;display:grid;place-items:center;width:84px;height:84px;border:2px solid #89fff0;border-radius:24px;background:radial-gradient(circle at 32% 15%,#247e98,#0a435c 65%,#102e49);box-shadow:inset 0 0 15px #54eedb77,0 0 23px #1bc8cd91}
+    .win-bolt-award:before{content:"";position:absolute;inset:-7px;border:1px solid #51cbc5;border-radius:29px;transform:rotate(-11deg);animation:winBoltPulse 1.65s ease-in-out infinite alternate}
+    .win-bolt-award span{position:relative;width:32px;height:52px;filter:drop-shadow(0 0 7px #75ffe880)}
+    .win-bolt-award span:before,.win-bolt-award span:after{content:"";position:absolute;left:8px;width:18px;height:29px;background:#a4ffe8;transform:skew(-30deg)}
+    .win-bolt-award span:before{top:0;background:#d9fff1}
+    .win-bolt-award span:after{bottom:0;left:5px}
+    @keyframes winBoltPulse{from{opacity:.5;transform:rotate(-11deg) scale(.98)}to{opacity:1;transform:rotate(-11deg) scale(1.08)}}
+    .win-smirk{position:relative;display:grid;place-items:center;width:84px;height:84px;border:1px solid #ffa9cb;border-radius:26px;background:radial-gradient(circle at 30% 15%,#9a3f79,#56284e 68%,#3d2145);box-shadow:inset 0 0 14px #f88acb50,0 0 21px #d253a27a}
+    .win-bolt-award[hidden],.win-smirk[hidden]{display:none}
+    .win-card.smirk-revealed .win-smirk{animation:winSmirkReveal .28s ease-out both}
+    .win-smirk:before{content:"";position:absolute;inset:-6px;border:1px solid #e47eae;border-radius:30px;transform:rotate(10deg);animation:winSmirkGlow 1.8s ease-in-out infinite alternate}
+    .win-smirk span{display:block;font-size:53px;line-height:1;transform:rotate(-10deg);text-shadow:0 5px 7px #38152c77}
+    @keyframes winSmirkGlow{from{opacity:.55;transform:rotate(10deg) scale(.98)}to{opacity:1;transform:rotate(10deg) scale(1.06)}}
+    @keyframes winSmirkReveal{from{opacity:0;transform:scale(.84) rotate(7deg)}to{opacity:1;transform:none}}
     .win-card{--win-gold:#a24e0f;--win-gold-edge:#df992e;--win-sparkle:#d78b19;--win-glow:#ffb53495;--result-label:#685c50}
     .win .win-card.all-solutions{border-color:var(--win-gold-edge);box-shadow:0 0 0 5px #ffca5b35,0 0 42px var(--win-glow),0 25px 80px #0004}
     .win-card.all-solutions:before{background:conic-gradient(from 25deg,#ffeab9,#ffa21e88,#ffe28b,#ffca5866,#ffeab9);opacity:.55}
@@ -111,7 +153,7 @@
     .win-sparkles span:nth-child(2){top:17%;right:19%;font-size:17px;animation-delay:-.55s}
     .win-sparkles span:nth-child(3){top:7%;right:13%;font-size:12px;animation-delay:-1s}
     @keyframes winTwinkle{from{opacity:.45;transform:scale(.75)}to{opacity:1;transform:scale(1.16)}}
-    @media(prefers-reduced-motion:reduce){.win-sparkles span,.win-award-gem{animation:none}}
+    @media(prefers-reduced-motion:reduce){.win-sparkles span,.win-award-gem,.win-bolt-award:before,.win-smirk:before,.win-card.smirk-revealed .win-smirk{animation:none}.win .win-card.no-returns{transition:none}}
     @media(max-width:480px){.win-card{padding-inline:18px}.piece-tray.completed{padding-block-start:20px}}
     .pieces-title-group{display:flex;align-items:center;gap:14px;min-width:0}.theme-toggle{position:relative;display:flex;align-items:center;justify-content:space-between;flex:none;width:76px;height:38px;padding:4px;border:1px solid var(--line);border-radius:999px;background:#fffaf2;color:#a19b90;box-shadow:inset 0 1px 0 #ffffffa6;cursor:pointer;isolation:isolate}.theme-toggle .theme-thumb{position:absolute;z-index:-1;left:4px;top:4px;width:28px;height:28px;border-radius:999px;background:#f1e8dc;transition:transform .22s ease,background .22s ease}.theme-toggle[aria-pressed="true"] .theme-thumb{transform:translateX(38px);background:#fbe5d8}.theme-toggle .theme-icon{display:grid;place-items:center;width:30px;height:28px;color:#a19b90}.theme-toggle .theme-icon svg{display:block;width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.theme-toggle[aria-pressed="false"] .theme-sun{color:var(--orange-dark)}.theme-toggle[aria-pressed="true"] .theme-moon{color:var(--orange-dark)}
     body.dark-mode{--ink:#edf0f2;--muted:#a4adb4;--paper:#171a1d;--card:#22272b;--orange:#ff7940;--orange-dark:#ff9167;--pink:#f7b9a7;--line:#3b444b;--green:#9bc9a5;--shadow:0 18px 55px #0005;background:radial-gradient(ellipse at 12% 4%,#30312b 0,transparent 34%),var(--paper);color:var(--ink)}
@@ -151,8 +193,12 @@
     body.dark-mode .toast{background:#e8edf0;color:#202629}
     body.dark-mode .win-card{--win-gold:#ffe09b;--win-gold-edge:#f2bc57;--win-sparkle:#ffde8a;--win-glow:#edab3d8c;--result-label:#ded0bf;background:linear-gradient(145deg,#292e32,#342b27);border-color:#554a40}
     body.dark-mode .win-card h2{color:#fff1e7}
+    body.dark-mode .win .win-card.standard-win{--party-edge:#ef9a67;--party-glow:#ff776b65;--party-star:#ffd6a7;--result-label:#f0c7b6;background:radial-gradient(ellipse at 50% 0,#733d3e,transparent 61%),linear-gradient(145deg,#352136,#31232b 66%,#4e2936)}
+    body.dark-mode .win-card.standard-win #winTitle{color:#ffe4c5}
     body.dark-mode .win .win-card.new-solution{--win-sparkle:#dcc0ff;--result-label:#d8cbf1;background:radial-gradient(ellipse at 50% 0,#482b71,transparent 58%),linear-gradient(155deg,#211934,#1b223b);border-color:#9672e2;box-shadow:0 0 0 4px #b38aff32,0 0 36px #9055f579,0 25px 80px #0006}
     body.dark-mode .win-card.new-solution #winTitle{color:#ecddff}
+    body.dark-mode .win .win-card.no-returns{--win-sparkle:#a3ffed;--result-label:#c1ebe9;--no-returns-title:#b5fff0;background:radial-gradient(ellipse at 50% 0,#205966,transparent 62%),linear-gradient(155deg,#122b39,#102137);border-color:#59ded6;box-shadow:0 0 0 4px #61e4dc35,0 0 32px #26bfcd72,0 25px 80px #0006}
+    body.dark-mode .win .win-card.no-returns.smirk-revealed{--win-sparkle:#f5a6cf;--result-label:#f1c8dc;--no-returns-title:#ffc0df;background:radial-gradient(ellipse at 50% 0,#6b2d52,transparent 62%),linear-gradient(155deg,#331a32,#251b33);border-color:#db75ab;box-shadow:0 0 0 4px #e775b135,0 0 32px #d654a172,0 25px 80px #0006}
     body.dark-mode .win-results{--result-border:#fff2de26;--result-label:#ded0bf;--result-value:#fff1e7;--result-time:#ffae86;background:#191a1f61}
     body.dark-mode .win-card .win-first-completion{background:#ffab4c19;color:#ffddac}
     body.dark-mode .win-card .win-improvement{background:#84d69a25;color:#baf2c9}
@@ -228,10 +274,17 @@
   <div class="win" id="win">
     <div class="confetti" id="confetti" aria-hidden="true"></div>
     <div class="win-card" id="winCard">
+      <div class="win-party-effects" id="winPartyEffects" aria-hidden="true" hidden>
+        <span class="win-party-glint">✦</span><span class="win-party-glint">✧</span><span class="win-party-glint">✧</span><span class="win-party-glint">✦</span>
+        <span class="win-party-particle" style="--angle:-174deg;--particle-color:#ffc26b"></span><span class="win-party-particle" style="--angle:-154deg;--particle-color:#ff7e9a"></span><span class="win-party-particle" style="--angle:-135deg;--particle-color:#ffc26b"></span><span class="win-party-particle" style="--angle:-42deg;--particle-color:#bda0fa"></span><span class="win-party-particle" style="--angle:-19deg;--particle-color:#ff8e7a"></span><span class="win-party-particle" style="--angle:9deg;--particle-color:#ffc26b"></span><span class="win-party-particle" style="--angle:155deg;--particle-color:#a6d9ed"></span><span class="win-party-particle" style="--angle:25deg;--particle-color:#a6d9ed"></span>
+        <span class="win-party-sweep"></span>
+      </div>
       <div class="win-sparkles" id="winSparkles" aria-hidden="true" hidden><span>✦</span><span>✧</span><span>✦</span></div>
       <div class="win-emoji" aria-hidden="true">
         <span id="winEmoji">🎉</span>
         <span class="win-award" id="winAward" hidden><span class="win-award-ribbon"></span><span class="win-award-medal"><span class="win-award-gem"></span></span></span>
+        <span class="win-bolt-award" id="winBoltAward" hidden><span></span></span>
+        <span class="win-smirk" id="winSmirk" hidden><span>😏</span></span>
       </div>
       <h2 id="winTitle">拼出来了！</h2>
       <p id="winMessage">今天的日期已经完整露出。</p>
@@ -296,7 +349,7 @@
       const undoButton=document.querySelector('#undoBtn');
       let targetDate=todayTarget(),targetIds=new Set(),pieces=[],placements=new Map(),selected=null,drag=null,carry=null,initial=null,undoStack=[],hintCount=0,hintLimit=2,hasManualPlacement=false,timerStartedAt=null,returningPieceId=null;
       const dailyProgressCache=new Map();
-      let roundCompletion=null,dailyStorageAvailable=true;
+      let roundCompletion=null,hasReturnedBoardPiece=false,dailyStorageAvailable=true,smirkTimer;
       const key=(r,c)=>`${r},${c}`;
       // Target dates are calendar days. Only the daily counter follows the device's local clock.
       function dateInfo(date){return{month:date.getUTCMonth()+1,day:date.getUTCDate(),weekday:date.getUTCDay()}}
@@ -390,11 +443,15 @@
         element.replaceChildren(allCompleted?'已集齐 ':'拼法收集 ',value);
         element.hidden=false;
       }
+      function closeWin(){
+        clearTimeout(smirkTimer);
+        document.querySelector('#win').classList.remove('show');
+      }
       async function showWin(){
         if(roundCompletion)return;
         const finishedAt=new Date();
         const elapsed=timerStartedAt===null?0:Math.max(0,Math.floor((finishedAt.getTime()-timerStartedAt)/1000));
-        const completion={date:targetDate,elapsed,hints:hintCount};
+        const completion={date:targetDate,elapsed,hints:hintCount,noReturns:!hasReturnedBoardPiece};
         const signature=solutionSignature(placedOptions());
         const catalog=solutionCatalog(completion.date);
         if(!catalog.has(signature))return;
@@ -409,22 +466,33 @@
         if(roundCompletion!==completion||boardTransitioning)return;
         const {total,count:collected,allCompleted,newlyCompleted}=solutionProgress;
         const justCompletedAll=newlyCompleted&&allCompleted;
-        const isNewSolution=newlyCompleted&&collected>=2&&!allCompleted;
+        const noReturns=completion.noReturns&&!justCompletedAll;
+        const isNewSolution=newlyCompleted&&collected>=2&&!allCompleted&&!noReturns;
         completion.solutionProgress=solutionProgress;
         renderTray();
         const {count,lastElapsed,hints,restarts}=result;
         const {month,day,weekday}=dateInfo(completion.date);
         const winCard=document.querySelector('#winCard');
+        const standardWin=!(justCompletedAll||isNewSolution||noReturns);
+        winCard.classList.toggle('standard-win',standardWin);
+        document.querySelector('#winPartyEffects').hidden=!standardWin;
         winCard.classList.toggle('all-solutions',justCompletedAll);
         winCard.classList.toggle('new-solution',isNewSolution);
-        document.querySelector('#winSparkles').hidden=!(justCompletedAll||isNewSolution);
+        winCard.classList.toggle('no-returns',noReturns);
+        winCard.classList.remove('smirk-revealed');
+        document.querySelector('#winSparkles').hidden=!(justCompletedAll||isNewSolution||noReturns);
         const winEmoji=document.querySelector('#winEmoji');
-        winEmoji.hidden=isNewSolution;
+        winEmoji.hidden=isNewSolution||noReturns;
         winEmoji.textContent=justCompletedAll?'🏆':'🎉';
         document.querySelector('#winAward').hidden=!isNewSolution;
-        document.querySelector('#winTitle').textContent=justCompletedAll?'你牛 B 大了！':isNewSolution?'智商专家!':'拼出来了！';
-        document.querySelector('#winMessage').textContent=justCompletedAll
+        const winBolt=document.querySelector('#winBoltAward'),winSmirk=document.querySelector('#winSmirk');
+        winBolt.hidden=!noReturns;
+        winSmirk.hidden=true;
+        document.querySelector('#winTitle').textContent=justCompletedAll?'你牛 B 大了！':noReturns?'毫不犹豫！':isNewSolution?'智商专家!':'拼出来了！';
+        const winMessage=document.querySelector('#winMessage');
+        winMessage.textContent=justCompletedAll
           ?`恭喜你已完成${targetName(completion.date)}的全部 ${total} 种拼法！大神，给个签名吧！`
+          :noReturns?'你完美的知道每一块拼块的位置，犹如神助'
           :isNewSolution?'真厉害，你又解锁了新的拼法！':`${month} 月 ${day} 日，${weekdays[weekday]}`;
         document.querySelector('#winElapsed').textContent=formatDuration(completion.elapsed);
         document.querySelector('#winTodayCount').textContent=count;
@@ -436,7 +504,15 @@
           ?`你在 ${hints} 次提示、${restarts} 次重开后，终于获得了胜利`:'');
         renderSolutionProgress(document.querySelector('#winSolutionProgress'),solutionProgress);
         celebrate();
-        document.querySelector('#win').classList.add('show');
+        const win=document.querySelector('#win');
+        win.classList.add('show');
+        if(noReturns)smirkTimer=setTimeout(()=>{
+          if(roundCompletion!==completion||!win.classList.contains('show'))return;
+          winCard.classList.add('smirk-revealed');
+          winBolt.hidden=true;
+          winSmirk.hidden=false;
+          winMessage.textContent='你居然完美的知道每一块的位置，犹如神助';
+        },2000);
       }
       let outlineLayer=null;
       function drawPieceOutline(id){if(!outlineLayer)return;outlineLayer.replaceChildren();const piece=pieces.find(p=>p.id===id),pos=placements.get(id);if(!piece||!pos)return;const boardRect=board.getBoundingClientRect(),gap=(parseFloat(getComputedStyle(board).gap)||0)/2,shape=new Set(piece.cells.map(c=>key(c.y,c.x))),segments=[];for(const c of piece.cells){const el=board.querySelector(`.cell[data-key="${key(pos.y+c.y,pos.x+c.x)}"]`);if(!el)continue;const r=el.getBoundingClientRect(),x=r.left-boardRect.left-gap,y=r.top-boardRect.top-gap,w=r.width+gap*2,h=r.height+gap*2;if(!shape.has(key(c.y-1,c.x)))segments.push(`M${x},${y}H${x+w}`);if(!shape.has(key(c.y,c.x+1)))segments.push(`M${x+w},${y}V${y+h}`);if(!shape.has(key(c.y+1,c.x)))segments.push(`M${x+w},${y+h}H${x}`);if(!shape.has(key(c.y,c.x-1)))segments.push(`M${x},${y+h}V${y}`)}const d=segments.join(' ');for(const [stroke,width,opacity]of [['#34271f',5,.26],['#fffaf2',2.5,.96]]){const path=document.createElementNS('http://www.w3.org/2000/svg','path');path.setAttribute('d',d);path.setAttribute('fill','none');path.setAttribute('stroke',stroke);path.setAttribute('stroke-width',width);path.setAttribute('stroke-opacity',opacity);path.setAttribute('stroke-linecap','round');path.setAttribute('stroke-linejoin','round');outlineLayer.append(path)}}
@@ -620,8 +696,8 @@
       function moveCarry(e){if(!carry)return;carry.pointer={clientX:e.clientX,clientY:e.clientY};refreshCarry()}
       function stopCarry(){if(!carry)return;document.removeEventListener('pointermove',moveCarry);document.removeEventListener('wheel',onCarryWheel,true);document.removeEventListener('contextmenu',onCarryContextMenu,true);carry.ghost.remove();carry=null;document.body.classList.remove('piece-carrying')}
       function beginCarry(e,source){const p=pieces.find(x=>x.id===source.id);if(!p)return;const from=source.initial?.pos||null;carry={id:source.id,from,fromCells:source.initial?.cells,pointer:{clientX:e.clientX,clientY:e.clientY},viewKey:null,lastWheel:0,ghost:source.ghost};carry.grab=carryAnchor(p);carry.ghost.classList.add('carry-ghost');const grid=pieceGrid(p);carryGridStyle(grid,p,snap(carry.pointer));carry.ghost.replaceChildren(grid);document.body.classList.add('piece-carrying');document.addEventListener('pointermove',moveCarry);document.addEventListener('wheel',onCarryWheel,{capture:true,passive:false});document.addEventListener('contextmenu',onCarryContextMenu,true);renderBoard();renderTray();progress();refreshCarry()}
-      function cancelCarry(restoreOriginal=true){if(!carry)return;const old=carry,p=pieces.find(x=>x.id===old.id);stopCarry();if(restoreOriginal&&old.from){p.cells=old.fromCells;placements.set(old.id,old.from)}selected=null;renderBoard();renderTray();progress();resetDragHint()}
-      function returnCarry(){if(!carry)return;const old=carry;stopCarry();if(old.from)undoStack.push({type:'return',id:old.id,pos:old.from,cells:old.fromCells});selected=null;returningPieceId=old.id;renderBoard();renderTray();progress();resetDragHint();toastMsg('拼块已放回待选区')}
+      function cancelCarry(restoreOriginal=true){if(!carry)return;const old=carry,p=pieces.find(x=>x.id===old.id);stopCarry();if(old.from){if(restoreOriginal){p.cells=old.fromCells;placements.set(old.id,old.from)}else hasReturnedBoardPiece=true;}selected=null;renderBoard();renderTray();progress();resetDragHint()}
+      function returnCarry(){if(!carry)return;const old=carry;stopCarry();if(old.from){hasReturnedBoardPiece=true;undoStack.push({type:'return',id:old.id,pos:old.from,cells:old.fromCells})}selected=null;returningPieceId=old.id;renderBoard();renderTray();progress();resetDragHint();toastMsg('拼块已放回待选区')}
       function placeCarriedPiece(e){if(!carry||e.button!==0)return;e.preventDefault();e.stopPropagation();const rect=board.getBoundingClientRect();if(e.clientX<rect.left||e.clientX>rect.right||e.clientY<rect.top||e.clientY>rect.bottom)return;moveCarry(e);const p=pieces.find(x=>x.id===carry.id),anchor=carryAnchor(p),s=snap(e),x=s.x-anchor.x,y=s.y-anchor.y,check=placementCheck(p,x,y,p.id);if(!check.valid){toastMsg(check.blocked.some(b=>b.reason==='target')?'这里压到了目标日期，目标格要保留':check.blocked.some(b=>b.reason==='occupied')?'这里已有拼块，不能重叠':'拼块不能放在空白格或棋盘外');return}const old=carry;stopCarry();startElapsedTimer();if(!old.from){hasManualPlacement=true;if(hintCount===0)hintLimit=1}placements.set(p.id,{x,y});undoStack.push(old.from?{type:'move',id:p.id,pos:old.from,cells:old.fromCells}:{type:'place',id:p.id});selected=null;renderBoard();renderTray();progress();resetDragHint();if(allFilled())showWin()}
       function transformCarried(kind,direction=1){if(!carry)return false;const p=pieces.find(x=>x.id===carry.id);if(!p)return false;const changed=kind==='rotate'?(direction>=0?rotate(p):changeShape(p,cells=>cells.map(c=>({x:c.y,y:-c.x})))):flip(p);if(!changed)return false;rebuildCarryGhost();refreshCarry();return true}
       function onCarryWheel(e){if(!carry)return;e.preventDefault();e.stopPropagation();const now=Date.now();if(now-carry.lastWheel<90)return;carry.lastWheel=now;if(transformCarried('rotate',e.deltaY<0?-1:1))toastMsg('拼块已旋转')}
@@ -630,7 +706,7 @@
       window.addEventListener('resize',()=>{if(carry){rebuildCarryGhost();refreshCarry()}});
       function startDrag(e,id,el,grabHint=null){if(e.button!==0||drag||carry||roundCompletion||boardTransitioning)return;e.preventDefault();selected=id;const placed=placements.get(id),p=pieces.find(x=>x.id===id);if(placed){initial={id,pos:placed,cells:p.cells};const cell=e.target.closest('.cell.covered');if(cell){const [r,c]=cell.dataset.key.split(',').map(Number);grabHint=p.cells.find(q=>q.x+placed.x===c&&q.y+placed.y===r)||grabHint}placements.delete(id);renderBoard()}else{initial=null;el.classList.add('selected')}const grab=grabHint||p.cells[0],metrics=snap(e),ghost=document.createElement('div'),grid=pieceGrid(p),ghostGap=1;ghost.className='drag-ghost';grid.style.gridTemplateColumns=`repeat(${Math.max(...p.cells.map(c=>c.x))+1},${metrics.cw}px)`;grid.style.gridAutoRows=`${metrics.ch}px`;grid.style.gap=`${ghostGap}px`;ghost.append(grid);document.body.append(ghost);drag={id,el,pointerId:e.pointerId,ghost,grab,cw:metrics.cw,ch:metrics.ch,gap:metrics.gap,ghostGap,startX:e.clientX,startY:e.clientY,moved:false};moveGhost(e);el.classList.add('dragging');el.setPointerCapture(e.pointerId);document.addEventListener('pointermove',moveDrag);document.addEventListener('pointerup',endDrag);document.addEventListener('pointercancel',cancelDrag)}
       function moveDrag(e){if(!drag||e.pointerId!==drag.pointerId)return;if(!drag.moved&&Math.hypot(e.clientX-drag.startX,e.clientY-drag.startY)<5)return;drag.moved=true;const p=pieces.find(x=>x.id===drag.id),s=snap(e),x=s.x-drag.grab.x,y=s.y-drag.grab.y,check=placementCheck(p,x,y,drag.id);moveGhost(e);renderBoard({...s,x,y,cells:p.cells,...check});updateDragHint(check)}
-      function endDrag(e){if(!drag||e.pointerId!==drag.pointerId)return;removeDragListeners();const p=pieces.find(x=>x.id===drag.id),tap=!drag.moved,snapPoint=snap(e),x=snapPoint.x-drag.grab.x,y=snapPoint.y-drag.grab.y,s=tap?null:{x,y,...placementCheck(p,x,y,p.id)},source={id:drag.id,el:drag.el,ghost:drag.ghost,grab:drag.grab,initial};drag.el.classList.remove('dragging');drag=null;if(tap){initial=null;beginCarry(e,source);return}const rect=board.getBoundingClientRect(),outside=e.clientX<rect.left||e.clientX>rect.right||e.clientY<rect.top||e.clientY>rect.bottom;source.ghost.remove();if(outside){if(initial){undoStack.push({type:'return',id:p.id,pos:initial.pos});toastMsg('拼块已移回待选区')}returningPieceId=p.id;selected=null}else if(s&&s.valid){startElapsedTimer();if(!initial){hasManualPlacement=true;if(hintCount===0)hintLimit=1}placements.set(p.id,{x:s.x,y:s.y});undoStack.push(initial?{type:'move',id:p.id,pos:initial.pos}:{type:'place',id:p.id});selected=null;if(allFilled()){renderTray();renderBoard();progress();showWin()}}else if(initial){placements.set(initial.id,initial.pos);toastMsg('原位置已恢复')}else if(s){const msg=s.blocked.some(b=>b.reason==='target')?'这个位置压到了目标日期，目标格需要保留':s.blocked.some(b=>b.reason==='occupied')?'这里已有拼块，不能重叠':'拼块不能放在空白格或棋盘外';toastMsg(msg)}initial=null;renderBoard();renderTray();progress();resetDragHint()}
+      function endDrag(e){if(!drag||e.pointerId!==drag.pointerId)return;removeDragListeners();const p=pieces.find(x=>x.id===drag.id),tap=!drag.moved,snapPoint=snap(e),x=snapPoint.x-drag.grab.x,y=snapPoint.y-drag.grab.y,s=tap?null:{x,y,...placementCheck(p,x,y,p.id)},source={id:drag.id,el:drag.el,ghost:drag.ghost,grab:drag.grab,initial};drag.el.classList.remove('dragging');drag=null;if(tap){initial=null;beginCarry(e,source);return}const rect=board.getBoundingClientRect(),outside=e.clientX<rect.left||e.clientX>rect.right||e.clientY<rect.top||e.clientY>rect.bottom;source.ghost.remove();if(outside){if(initial){hasReturnedBoardPiece=true;undoStack.push({type:'return',id:p.id,pos:initial.pos});toastMsg('拼块已移回待选区')}returningPieceId=p.id;selected=null}else if(s&&s.valid){startElapsedTimer();if(!initial){hasManualPlacement=true;if(hintCount===0)hintLimit=1}placements.set(p.id,{x:s.x,y:s.y});undoStack.push(initial?{type:'move',id:p.id,pos:initial.pos}:{type:'place',id:p.id});selected=null;if(allFilled()){renderTray();renderBoard();progress();showWin()}}else if(initial){placements.set(initial.id,initial.pos);toastMsg('原位置已恢复')}else if(s){const msg=s.blocked.some(b=>b.reason==='target')?'这个位置压到了目标日期，目标格需要保留':s.blocked.some(b=>b.reason==='occupied')?'这里已有拼块，不能重叠':'拼块不能放在空白格或棋盘外';toastMsg(msg)}initial=null;renderBoard();renderTray();progress();resetDragHint()}
       function removeDragListeners(){document.removeEventListener('pointermove',moveDrag);document.removeEventListener('pointerup',endDrag);document.removeEventListener('pointercancel',cancelDrag)}
       function cancelDrag(e){if(!drag||(e&&e.pointerId!==drag.pointerId))return;removeDragListeners();drag.el.classList.remove('dragging');drag.ghost.remove();if(initial)placements.set(initial.id,initial.pos);drag=null;initial=null;renderBoard();renderTray();progress();resetDragHint()}
       function playFlip(el,delay=0){if(!el)return;if(el.flipTimer)window.clearTimeout(el.flipTimer);el.classList.remove('is-flipping');el.style.setProperty('--flip-delay',`${delay}ms`);void el.offsetWidth;el.classList.add('is-flipping');el.flipTimer=window.setTimeout(()=>{el.classList.remove('is-flipping');el.style.removeProperty('--flip-delay');el.flipTimer=null},280+delay)}function replayFlipClock(){document.querySelectorAll('.goal-flips .flip-number').forEach((el,index)=>playFlip(el,index*45))}function setFlipValue(id,value){const el=document.getElementById(id);if(!el)return;const previous=el.dataset.value||el.textContent;el.textContent=value;el.dataset.value=value;if(previous!==value)playFlip(el)}
@@ -645,8 +721,8 @@
           if(restart)recordAttemptAction(requestedAt,nextDate,'restarts');
           return true;
         };
-        const nextDate=date;if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){const ok=startGame();if(ok&&replayClock)replayFlipClock();return ok}const oldCells=[...board.querySelectorAll('.cell:not(.empty)')];if(!oldCells.length){const ok=startGame();if(ok&&replayClock)replayFlipClock();return ok}boardTransitioning=true;document.body.classList.add('board-transitioning');document.querySelector('#win').classList.remove('show');closeHintModal();oldCells.forEach(cell=>{cell.style.setProperty('--shard-delay',`${Math.round(Math.random()*220)}ms`);cell.style.setProperty('--shard-x',`${Math.round((Math.random()-.5)*150)}px`);cell.style.setProperty('--shard-y',`${Math.round(130+Math.random()*180)}px`);cell.style.setProperty('--shard-rotate',`${Math.round((Math.random()-.5)*170)}deg`)});board.classList.add('is-shattering');window.setTimeout(()=>{board.classList.remove('is-shattering');if(!startGame()){oldCells.forEach(cell=>{cell.style.removeProperty('--shard-delay');cell.style.removeProperty('--shard-x');cell.style.removeProperty('--shard-y');cell.style.removeProperty('--shard-rotate')});document.body.classList.remove('board-transitioning');boardTransitioning=false;return}const newCells=[...board.querySelectorAll('.cell:not(.empty)')];newCells.forEach((cell,index)=>cell.style.setProperty('--form-delay',`${Math.round(index*4.5)}ms`));board.classList.add('is-forming');if(replayClock)replayFlipClock();window.setTimeout(()=>{board.classList.remove('is-forming');newCells.forEach(cell=>{cell.style.removeProperty('--form-delay')});document.body.classList.remove('board-transitioning');boardTransitioning=false},570)},760);return true}
-      function setup(date){if(carry)cancelCarry(true);targetDate=date;targetIds=cellsFor(date);pieces=partition();placements.clear();undoStack=[];selected=null;hintCount=0;hintLimit=2;hasManualPlacement=false;timerStartedAt=null;roundCompletion=null;undoButton.disabled=false;closeHintModal();resetDragHint();setFlipValue('targetMonthValue',`${targetDate.getUTCMonth()+1}月`);setFlipValue('targetDayValue',`${targetDate.getUTCDate()}日`);setFlipValue('targetWeekdayValue',weekdays[targetDate.getUTCDay()].slice(2));document.querySelector('#datePicker').value=dateKey(targetDate);buildBoard();renderBoard();renderTray();progress();document.querySelector('#win').classList.remove('show');return true}
+        const nextDate=date;if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){const ok=startGame();if(ok&&replayClock)replayFlipClock();return ok}const oldCells=[...board.querySelectorAll('.cell:not(.empty)')];if(!oldCells.length){const ok=startGame();if(ok&&replayClock)replayFlipClock();return ok}boardTransitioning=true;document.body.classList.add('board-transitioning');closeWin();closeHintModal();oldCells.forEach(cell=>{cell.style.setProperty('--shard-delay',`${Math.round(Math.random()*220)}ms`);cell.style.setProperty('--shard-x',`${Math.round((Math.random()-.5)*150)}px`);cell.style.setProperty('--shard-y',`${Math.round(130+Math.random()*180)}px`);cell.style.setProperty('--shard-rotate',`${Math.round((Math.random()-.5)*170)}deg`)});board.classList.add('is-shattering');window.setTimeout(()=>{board.classList.remove('is-shattering');if(!startGame()){oldCells.forEach(cell=>{cell.style.removeProperty('--shard-delay');cell.style.removeProperty('--shard-x');cell.style.removeProperty('--shard-y');cell.style.removeProperty('--shard-rotate')});document.body.classList.remove('board-transitioning');boardTransitioning=false;return}const newCells=[...board.querySelectorAll('.cell:not(.empty)')];newCells.forEach((cell,index)=>cell.style.setProperty('--form-delay',`${Math.round(index*4.5)}ms`));board.classList.add('is-forming');if(replayClock)replayFlipClock();window.setTimeout(()=>{board.classList.remove('is-forming');newCells.forEach(cell=>{cell.style.removeProperty('--form-delay')});document.body.classList.remove('board-transitioning');boardTransitioning=false},570)},760);return true}
+      function setup(date){if(carry)cancelCarry(true);targetDate=date;targetIds=cellsFor(date);pieces=partition();placements.clear();undoStack=[];selected=null;hintCount=0;hintLimit=2;hasManualPlacement=false;timerStartedAt=null;roundCompletion=null;hasReturnedBoardPiece=false;undoButton.disabled=false;closeHintModal();resetDragHint();setFlipValue('targetMonthValue',`${targetDate.getUTCMonth()+1}月`);setFlipValue('targetDayValue',`${targetDate.getUTCDate()}日`);setFlipValue('targetWeekdayValue',weekdays[targetDate.getUTCDay()].slice(2));document.querySelector('#datePicker').value=dateKey(targetDate);buildBoard();renderBoard();renderTray();progress();closeWin();return true}
       document.querySelector('#resetBtn').addEventListener('click',()=>{if(animateNewGame(targetDate,{restart:true,replayClock:true}))toastMsg('本局已重开')});
       const themeToggle=document.querySelector('#themeToggle');
       function setDarkMode(enabled,persist=true){document.body.classList.toggle('dark-mode',enabled);themeToggle.setAttribute('aria-pressed',String(enabled));themeToggle.setAttribute('aria-label',enabled?'切换到浅色模式':'切换到深色模式');document.querySelector('meta[name="theme-color"]').content=enabled?'#171a1d':'#f6f2e9';if(persist){try{localStorage.setItem('brain-calendar-theme',enabled?'dark':'light')}catch{}}}
@@ -661,12 +737,12 @@
       document.querySelector('#hintBack').addEventListener('click',()=>openHintModal('choice'));
       document.querySelector('#confessionForm').addEventListener('submit',event=>{event.preventDefault();if(document.querySelector('#confessionInput').value.trim()==='我智商低'){closeHintModal();toastMsg('回答正确，继续挑战吧')}else document.querySelector('#confessionError').textContent='请准确输入“我智商低”后再点确定'});
       document.addEventListener('keydown',event=>{if(event.key==='Escape'&&carry){event.preventDefault();cancelCarry(true);toastMsg('已取消拿起拼块')}else if(event.key==='Escape'&&document.querySelector('#hintModal').classList.contains('show'))event.preventDefault()});
-      undoButton.addEventListener('click',()=>{if(roundCompletion||boardTransitioning||drag)return;if(carry)cancelCarry(true);const action=undoStack.pop();if(!action){toastMsg('没有可撤销的步骤');return}if(action.type==='move'||action.type==='return'){if(action.cells)pieces.find(p=>p.id===action.id).cells=action.cells;placements.set(action.id,action.pos)}else if(action.type==='shape'){const piece=pieces.find(p=>p.id===action.id);piece.cells=action.cells}else if(action.type==='hint'){placements.delete(action.id);const piece=pieces.find(p=>p.id===action.id);piece.cells=action.cells}else placements.delete(action.id);document.querySelector('#win').classList.remove('show');selected=null;renderBoard();renderTray();progress();replayFlipClock();toastMsg('已撤销上一步')});
+      undoButton.addEventListener('click',()=>{if(roundCompletion||boardTransitioning||drag)return;if(carry)cancelCarry(true);const action=undoStack.pop();if(!action){toastMsg('没有可撤销的步骤');return}if(action.type==='place'||action.type==='hint')hasReturnedBoardPiece=true;if(action.type==='move'||action.type==='return'){if(action.cells)pieces.find(p=>p.id===action.id).cells=action.cells;placements.set(action.id,action.pos)}else if(action.type==='shape'){const piece=pieces.find(p=>p.id===action.id);piece.cells=action.cells}else if(action.type==='hint'){placements.delete(action.id);const piece=pieces.find(p=>p.id===action.id);piece.cells=action.cells}else placements.delete(action.id);closeWin();selected=null;renderBoard();renderTray();progress();replayFlipClock();toastMsg('已撤销上一步')});
       document.querySelector('#rotateBtn').addEventListener('click',()=>{if(drag)return;if(carry){if(transformCarried('rotate'))toastMsg('拼块已旋转');return}const p=pieces.find(p=>p.id===selected);if(p)rotate(p)&&toastMsg('拼块已旋转');else if(!p)toastMsg('先选择一块拼块')});
       document.querySelector('#flipBtn').addEventListener('click',()=>{if(drag)return;if(carry){if(transformCarried('flip'))toastMsg('拼块已翻转');return}const p=pieces.find(p=>p.id===selected);if(p)flip(p)&&toastMsg('拼块已翻转');else if(!p)toastMsg('先选择一块拼块')});
       document.querySelector('#datePickerBtn').addEventListener('click',()=>{const picker=document.querySelector('#datePicker');picker.showPicker?picker.showPicker():picker.click()});
       document.querySelector('#datePicker').addEventListener('change',e=>{if(e.target.value){const date=e.target.valueAsDate;if(date&&animateNewGame(date))toastMsg('目标日期已更新');else e.target.value=dateKey(targetDate)}});
-      document.querySelector('#winClose').addEventListener('click',()=>document.querySelector('#win').classList.remove('show'));
+      document.querySelector('#winClose').addEventListener('click',closeWin);
       setup(todayTarget());
     })();
   </script>
