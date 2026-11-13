@@ -20,9 +20,11 @@ Open `index.html` in a modern browser. No installation or build step is required
 - Click a piece to pick it up and attach it to the cursor. Use the wheel to rotate, right-click to flip, and left-click the board to place it. Drag and drop still works too.
 - Select a placed piece, then use Rotate or Flip to change its orientation.
 - Drag a piece outside the board and release it to return it to the tray.
-- Use Undo, Restart, or Change date to start another challenge.
+- Use Undo to reverse your last move. Completing the puzzle locks the board. Use Restart or Change date to start another challenge.
 - On a fresh, empty board, “First-piece hint” places one randomly selected piece correctly; one more actual placement is available through “Continue hint”. If you place a piece manually first, only one actual hint placement is available. When two or more pieces are already on the board, clicking “Continue hint” shows “Hints are available only with fewer than 2 pieces placed”. After the hint allowance is used up, clicking again opens the recharge-code or text-entry dialog. Each round allows at most two hinted pieces; undoing or moving pieces does not restore uses. Restarting or changing the date resets the count.
-- Completing the target reveals a celebration animation, elapsed time, and hint count. The timer starts with the first hint click or first successful placement and is shown as HH:MM:SS.
+- Completing a puzzle shows your elapsed time, hints used, and total completions today. The timer starts when a hint places a piece or when you first place a piece successfully. Zero hours and minutes are omitted.
+- Daily totals cover all target dates and start at local midnight. The dialog shows a time improvement when you beat your previous time for the same target that day. On the first completion of a target that day, it also shows the total hints and restarts if you used both. Daily progress is stored in the current browser.
+- The victory dialog and piece tray show how many solutions the target date has and how many you have found. Each layout counts once, and progress is stored in the current browser for each target date. Hints lead to undiscovered solutions until you find them all. The final new solution triggers a special victory dialog.
 
 ### Project files
 
@@ -52,9 +54,11 @@ By Will
 - 将拼块拖到棋盘，靠近格子时会自动吸附。
 - 选中棋盘上的拼块后，使用“旋转”或“翻转”调整方向。
 - 将拼块拖出棋盘后松开，可放回待选区。
-- 使用“撤销”“重开”或“换日期”开始新挑战。
+- 可以撤销上一步。拼成后棋盘会锁定，可重开或更换日期开始新挑战。
 - 新局棋盘为空时可使用“首块提示”，之后“继续提示”还可放置一块；如果先手动放置拼块，则只提供一次实际提示。棋盘上已有两块或更多拼块时，点击“继续提示”会提示“只有摆放2块以下时方可提示”；提示额度用完后再次点击则打开充值码或输入文字弹窗。每局最多放置两块提示拼块，撤销或移动拼块不会恢复次数，重开本局或更换日期后重置。
-- 拼出目标后会显示庆祝动画、用时和提示次数；计时从首次点击提示或首次成功落子开始，格式为时:分:秒。
+- 拼成后显示本局用时、提示次数和今日累计拼成次数。用时从首次获得提示或首次成功落子开始，省略为零的小时和分钟。
+- 今日次数按电脑本地时间从午夜起累计，包含所有目标日期。同一目标当天再次拼成且比上一次更快时，弹窗会显示快了多少。当天首次拼成某个目标时，如果实际获得过提示且重开过，也会显示累计提示和重开次数。当天进度保存在当前浏览器中。
+- 胜利弹窗和待选区会显示目标日期的拼法总数和已拼出的种数。每种摆法只计一次，进度按目标日期保存在当前浏览器中。集齐前，提示只引导到尚未完成的拼法。拼出最后一种时会触发特别胜利弹窗。
 
 ### 许可
 
